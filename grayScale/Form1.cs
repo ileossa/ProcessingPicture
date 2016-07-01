@@ -43,7 +43,7 @@ namespace grayScale
             int width = bitmap.Width;
             int height = bitmap.Height;
 
-            bitmap = greenProcessing(bitmap, width, height);          
+            bitmap = contrastProcessing(save, width, height);
 
 
             //load grayscale image in picture 2 box
@@ -237,5 +237,102 @@ namespace grayScale
             }
             return picture;
         }
+        
+        /// <summary>
+        ///     Permet de changer la luminosité par défaut 100
+        ///         0 < 255  penche vers le blanc
+        ///         0 < -255 penche vers le noir
+        /// </summary>
+        /// <param name="picture"></param>
+        /// <param name="width"></param>
+        /// <param name="height"></param>
+        /// <param name="range"></param>
+        /// <returns></returns>
+        private Bitmap brightnessProcessing(Bitmap picture, int width, int height, int range = 100)
+        {
+            if (range < -255) range = -255;
+            if (range > 255) range = 255;
+
+            //color of pixel
+            Color c;
+            
+            // Brightness filtre processing
+            for (int i = 0; i < picture.Width; i++)
+            {
+                for (int j = 0; j < picture.Height; j++)
+                {
+                    c = picture.GetPixel(i, j);
+                    int r = c.R + range;
+                    int g = c.G + range;
+                    int b = c.B + range;
+
+                    if (r < 0) r = 1;
+                    if (r > 255) r = 255;
+
+                    if (g < 0) g = 1;
+                    if (g > 255) g = 255;
+
+                    if (b < 0) b = 1;
+                    if (b > 255) b = 255;
+
+                    picture.SetPixel(i, j, Color.FromArgb((byte)r, (byte)g, (byte)b));
+                }
+            }
+            return picture;
+        }
+
+        /// <summary>
+        ///     Permet de changer le contrast par défaut la moitié (50)
+        ///         0 < 100   tends vers le foncé
+        ///         0 < -100  tends vers le clair
+        /// </summary>
+        /// <param name="picture"></param>
+        /// <param name="width"></param>
+        /// <param name="height"></param>
+        /// <param name="range"></param>
+        /// <returns></returns>
+        private Bitmap contrastProcessing(Bitmap picture, int width, int height, double range = 50)
+        {
+            
+            if (range < -100) range = -100;
+            if (range > 100) range = 100;
+            range = (100.0 + range) / 100.0;
+            range *= range;
+            Color c;
+            for (int i = 0; i < picture.Width; i++)
+            {
+                for (int j = 0; j < picture.Height; j++)
+                {
+                    c = picture.GetPixel(i, j);
+                    double r = c.R / 255.0;
+                    r -= 0.5;
+                    r *= range;
+                    r += 0.5;
+                    r *= 255;
+                    if (r < 0) r = 0;
+                    if (r > 255) r = 255;
+
+                    double g = c.G / 255.0;
+                    g -= 0.5;
+                    g *= range;
+                    g += 0.5;
+                    g *= 255;
+                    if (g < 0) g = 0;
+                    if (g > 255) g = 255;
+
+                    double b = c.B / 255.0;
+                    b -= 0.5;
+                    b *= range;
+                    b += 0.5;
+                    b *= 255;
+                    if (b < 0) b = 0;
+                    if (b > 255) b = 255;
+
+                    picture.SetPixel(i, j, Color.FromArgb((byte)r, (byte)g, (byte)b));
+                }
+            }
+            return picture;
+        }
+    
     }
 }

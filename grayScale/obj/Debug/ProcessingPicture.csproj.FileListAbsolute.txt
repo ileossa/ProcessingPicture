@@ -1,3 +1,9 @@
 C:\Users\swip\Documents\visual studio 2015\Projects\grayScale\grayScale\bin\Debug\grayScale.exe.config
 C:\Users\swip\Documents\visual studio 2015\Projects\grayScale\grayScale\obj\Debug\grayScale.exe
 C:\Users\swip\Documents\visual studio 2015\Projects\grayScale\grayScale\obj\Debug\grayScale.pdb
+C:\Users\swip\documents\visual studio 2015\Projects\grayScale\grayScale\bin\Debug\grayScale.exe
+C:\Users\swip\documents\visual studio 2015\Projects\grayScale\grayScale\bin\Debug\grayScale.pdb
+C:\Users\swip\documents\visual studio 2015\Projects\grayScale\grayScale\obj\Debug\ProcessingPicture.csprojResolveAssemblyReference.cache
+C:\Users\swip\documents\visual studio 2015\Projects\grayScale\grayScale\obj\Debug\grayScale.Form1.resources
+C:\Users\swip\documents\visual studio 2015\Projects\grayScale\grayScale\obj\Debug\grayScale.Properties.Resources.resources
+C:\Users\swip\documents\visual studio 2015\Projects\grayScale\grayScale\obj\Debug\ProcessingPicture.csproj.GenerateResource.Cache
