@@ -1,0 +1,24 @@
+
+##Projet sur la modification d'images en C#
+
+voir: 
+> IProcessing : Interface pour utiliser les méthodes
+> Processing : implémentes les méthodes pour modifier un images
+ 
+
+ 
+
+ public void main()
+  {
+    string path = "C:\\My\\Path\\Picture\\duck.jpg";
+   
+    // read Bitmap           
+    Bitmap result ;
+
+    IProcessing p = new Processing(path);
+    result = p.resize(1500, 1500);
+    result = p.grayScale();
+
+    //write grayscale image
+    result.Save(saveGrayScale);
+  }
