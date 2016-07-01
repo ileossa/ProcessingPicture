@@ -1,0 +1,3 @@
+C:\Users\swip\Documents\visual studio 2015\Projects\grayScale\grayScale\bin\Debug\grayScale.exe.config
+C:\Users\swip\Documents\visual studio 2015\Projects\grayScale\grayScale\obj\Debug\grayScale.exe
+C:\Users\swip\Documents\visual studio 2015\Projects\grayScale\grayScale\obj\Debug\grayScale.pdb

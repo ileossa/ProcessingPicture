@@ -1,0 +1,9 @@
+c:\users\swip\documents\visual studio 2015\Projects\grayScale\grayScale\bin\Debug\grayScale.exe.config
+c:\users\swip\documents\visual studio 2015\Projects\grayScale\grayScale\bin\Debug\grayScale.exe
+c:\users\swip\documents\visual studio 2015\Projects\grayScale\grayScale\bin\Debug\grayScale.pdb
+c:\users\swip\documents\visual studio 2015\Projects\grayScale\grayScale\obj\Debug\grayScale.csprojResolveAssemblyReference.cache
+c:\users\swip\documents\visual studio 2015\Projects\grayScale\grayScale\obj\Debug\grayScale.Form1.resources
+c:\users\swip\documents\visual studio 2015\Projects\grayScale\grayScale\obj\Debug\grayScale.Properties.Resources.resources
+c:\users\swip\documents\visual studio 2015\Projects\grayScale\grayScale\obj\Debug\grayScale.csproj.GenerateResource.Cache
+c:\users\swip\documents\visual studio 2015\Projects\grayScale\grayScale\obj\Debug\grayScale.exe
+c:\users\swip\documents\visual studio 2015\Projects\grayScale\grayScale\obj\Debug\grayScale.pdb
