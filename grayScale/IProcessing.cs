@@ -10,17 +10,17 @@ namespace grayScale
     interface IProcessing
     {
 
-        Bitmap grayScaleProcessing();
+        Bitmap grayScale();
 
-        Bitmap sepiaProcessing();
+        Bitmap sepia();
 
-        Bitmap negativProcessing();
+        Bitmap negativ();
 
-        Bitmap blueProcessing();
+        Bitmap blue();
 
-        Bitmap redProcessing();
+        Bitmap red();
 
-        Bitmap greenProcessing();
+        Bitmap green();
 
         /// <summary>
         ///     Permet de changer la luminosité par défaut 100
@@ -32,12 +32,12 @@ namespace grayScale
         /// <param name="height"></param>
         /// <param name="range"></param>
         /// <returns></returns>
-        Bitmap brightnessProcessing(int range = 100);
+        Bitmap brightness(int range = 100);
 
          
-        Bitmap contrastProcessing(double range = 50);
+        Bitmap contrast(double range = 50);
 
-        Bitmap resizeProcessing();
+        Bitmap resize(int newWidth, int newHeight);
         
     }
 }

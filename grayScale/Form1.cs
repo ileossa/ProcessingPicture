@@ -40,7 +40,7 @@ namespace grayScale
 
 
             IProcessing p = new Processing(path);
-            result = p.grayScaleProcessing();
+            result = p.resize(1500, 1500);
 
 
             //load grayscale image in picture 2 box

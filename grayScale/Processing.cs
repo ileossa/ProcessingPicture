@@ -43,7 +43,7 @@ namespace grayScale
             height = picture.Height;
         }
 
-        Bitmap IProcessing.grayScaleProcessing()
+        Bitmap IProcessing.grayScale()
         {
             //color of pixel
             Color p;
@@ -72,7 +72,7 @@ namespace grayScale
             return picture;
         }
 
-        Bitmap IProcessing.sepiaProcessing()
+        Bitmap IProcessing.sepia()
         {
             //color of pixel
             Color p;
@@ -131,7 +131,7 @@ namespace grayScale
             return picture;
         }
 
-        Bitmap IProcessing.negativProcessing()
+        Bitmap IProcessing.negativ()
         {
             //negative
             for (int y = 0; y < height; y++)
@@ -159,7 +159,7 @@ namespace grayScale
             return picture;
         }
 
-        Bitmap IProcessing.blueProcessing()
+        Bitmap IProcessing.blue()
         {
             for (int y = 0; y < height; y++)
             {
@@ -182,7 +182,7 @@ namespace grayScale
             return picture;
         }
 
-        Bitmap IProcessing.redProcessing()
+        Bitmap IProcessing.red()
         {
             for (int y = 0; y < height; y++)
             {
@@ -205,7 +205,7 @@ namespace grayScale
             return picture;
         }
 
-        Bitmap IProcessing.greenProcessing()
+        Bitmap IProcessing.green()
         {
             for (int y = 0; y < height; y++)
             {
@@ -238,7 +238,7 @@ namespace grayScale
         /// <param name="height"></param>
         /// <param name="range"></param>
         /// <returns></returns>
-        Bitmap IProcessing.brightnessProcessing(int range = 100)
+        Bitmap IProcessing.brightness(int range = 100)
         {
             if (range < -255) range = -255;
             if (range > 255) range = 255;
@@ -281,7 +281,7 @@ namespace grayScale
         /// <param name="height"></param>
         /// <param name="range"></param>
         /// <returns></returns>
-        Bitmap IProcessing.contrastProcessing(double range = 50)
+        Bitmap IProcessing.contrast(double range = 50)
         {
 
             if (range < -100) range = -100;
@@ -324,15 +324,15 @@ namespace grayScale
             return picture;
         }
 
-        Bitmap IProcessing.resizeProcessing()
+        Bitmap IProcessing.resize(int newWidth, int newHeight)
         {
-            if (width != 0 && height != 0)
+            if (newWidth != 0 && newHeight != 0)
             {
                 Bitmap temp = picture;
-                Bitmap bmap = new Bitmap(width, height, temp.PixelFormat);
+                Bitmap bmap = new Bitmap(newWidth, newHeight, temp.PixelFormat);
 
-                double nWidthFactor = (double)temp.Width / (double)width;
-                double nHeightFactor = (double)temp.Height / (double)height;
+                double nWidthFactor = (double)temp.Width / (double)newWidth;
+                double nHeightFactor = (double)temp.Height / (double)newHeight;
 
                 double fx, fy, nx, ny;
                 int cx, cy, fr_x, fr_y;
@@ -389,6 +389,7 @@ namespace grayScale
                         bmap.SetPixel(x, y, System.Drawing.Color.FromArgb(255, nRed, nGreen, nBlue));
                     }
                 }
+                return bmap;
             }
             return picture;
         }
